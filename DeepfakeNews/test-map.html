@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>深伪现象数据视角</title>
+<style>
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f9fafb;
+    margin: 0; padding: 0;
+  }
+  section {
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #f9fafb;
+    padding: 32px 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
+  }
+  h2, h3 {
+    color: #1e293b;
+  }
+  .text-center { text-align: center; }
+  .text-gray-600 { color: #64748b; }
+  .text-gray-500 { color: #6b7280; }
+  .mb-4 { margin-bottom: 16px; }
+  .mb-12 { margin-bottom: 48px; }
+  .mt-4 { margin-top: 16px; }
+  .mt-20 { margin-top: 80px; }
+  .grid {
+    display: grid;
+    gap: 32px;
+  }
+  @media(min-width: 768px) {
+    .md-grid-cols-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  #pieChart, #lineChart {
+    max-width: 100%;
+  }
+  #chinaMap {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 0.15);
+  }
+</style>
+</head>
+<body>
+
+<section>
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-extrabold mb-4">🔍 数据视角解读深伪现象</h2>
+    <p class="text-gray-600 text-lg">
+      借助问卷与公开数据，还原公众态度与舆论趋势
+    </p>
+  </div>
+
+  <div class="grid md-grid-cols-2">
+    <!-- 饼图 -->
+    <div>
+      <h3 class="text-2xl font-bold text-center mb-4">公众识别深伪能力调查</h3>
+      <canvas id="pieChart"></canvas>
+      <p class="text-sm text-gray-500 mt-4 text-center">
+        数据来源：2023年中国互联网发展报告（CNNIC 第52次）
+      </p>
+    </div>
+
+    <!-- 折线图 -->
+    <div>
+      <h3 class="text-2xl font-bold text-center mb-4">AI伪造相关舆情热度趋势</h3>
+      <canvas id="lineChart"></canvas>
+      <p class="text-sm text-gray-500 mt-4 text-center">
+        数据采集口径：以“AI伪造”“深度合成”等关键词抓取<br/>
+        统计平台：主流社交平台与主流媒体（2021-2024年）
+      </p>
+    </div>
+  </div>
+
+  <!-- 地图热力图 -->
+  <div class="mt-20">
+    <h3 class="text-2xl font-bold text-center mb-4">全国AI伪造舆情热度分布图</h3>
+    <div id="chinaMap"></div>
+    <p class="text-sm text-gray-500 mt-4 text-center">
+      数据统计：基于2022~2023关键词“AI伪造”“深度合成”抓取公开数据<br/>
+      平台范围：微博、知乎、头条、百度指数等
+    </p>
+  </div>
+</section>
+
+<!-- 引入图表库 -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+
+<script>
+    // 饼图初始化
+    const pieCtx = document.getElementById('pieChart').getContext('2d');
+    new Chart(pieCtx, {
+        type: 'pie',
+        data: {
+            labels: ['很容易识别', '偶尔能分辨', '很难判断'],
+            datasets: [{
+                label: '分辨真假比例',
+                data: [6.5, 20.9, 72.6],
+                backgroundColor: ['#2563EB', '#3B82F6', '#93C5FD']
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'bottom' }
+            }
+        }
+    });
+
+    // 折线图初始化
+    const lineCtx = document.getElementById('lineChart').getContext('2d');
+    new Chart(lineCtx, {
+        type: 'line',
+        data: {
+            labels: ['2021', '2022', '2023', '2024'],
+            datasets: [{
+                label: '热点话题次数',
+                data: [7540, 13460, 29000, 35000],
+                fill: false,
+                borderColor: '#2563EB',
+                tension: 0.1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: { beginAtZero: true }
+            }
+        }
+    });
+
+    // ECharts 地图初始化
+    const mapDom = document.getElementById('chinaMap');
+    const mapChart = echarts.init(mapDom);
+
+    // 动态加载中国地图geojson
+    fetch('https://geo.datav.aliyun.com/areas/bound/100000_full.json')
+        .then(response => {
+            if (!response.ok) throw new Error('地图数据加载失败');
+            return response.json();
+        })
+        .then(geoJson => {
+            echarts.registerMap('china', geoJson);
+
+            mapChart.setOption({
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{b}<br/>舆情热度值: {c}'
+                },
+                visualMap: {
+                    min: 0,
+                    max: 1500,
+                    left: 'left',
+                    bottom: '10%',
+                    text: ['高', '低'],
+                    calculable: true,
+                    inRange: {
+                        color: ['#E0F2FE', '#60A5FA', '#2563EB']
+                    }
+                },
+                series: [{
+                    name: 'AI伪造热度',
+                    type: 'map',
+                    map: 'china',
+                    roam: true,
+                    label: {
+                        show: true,
+                        fontSize: 10
+                    },
+                    data: [
+                        { name: '北京市', value: 1300 },
+                        { name: '广东省', value: 1220 },
+                        { name: '上海市', value: 1100 },
+                        { name: '浙江省', value: 940 },
+                        { name: '四川省', value: 880 },
+                        { name: '湖北省', value: 780 },
+                        { name: '辽宁省', value: 640 },
+                        { name: '江苏省', value: 710 }
+                    ]
+                }]
+            });
+        })
+        .catch(err => {
+            console.error(err);
+            mapDom.innerText = '地图加载失败，请检查网络或CDN访问权限';
+        });
+</script>
+
+</body>
+</html>

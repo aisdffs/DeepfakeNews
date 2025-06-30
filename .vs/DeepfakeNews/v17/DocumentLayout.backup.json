@@ -1,0 +1,79 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lenovo\\Desktop\\\u6BD4\u8D5B\\DeepfakeNews\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0409C4-6F87-4987-90A4-B0DBC27181F4}|DeepfakeNews\\DeepfakeNews.csproj|c:\\users\\lenovo\\desktop\\\u6BD4\u8D5B\\deepfakenews\\deepfakenews\\deepfakenews.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3F0409C4-6F87-4987-90A4-B0DBC27181F4}|DeepfakeNews\\DeepfakeNews.csproj|solutionrelative:deepfakenews\\deepfakenews.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0409C4-6F87-4987-90A4-B0DBC27181F4}|DeepfakeNews\\DeepfakeNews.csproj|c:\\users\\lenovo\\desktop\\\u6BD4\u8D5B\\deepfakenews\\deepfakenews\\test-map.html||{C76D83F8-A489-11D0-8195-00A0C91BBEE3}",
+      "RelativeMoniker": "D:0:0:{3F0409C4-6F87-4987-90A4-B0DBC27181F4}|DeepfakeNews\\DeepfakeNews.csproj|solutionrelative:deepfakenews\\test-map.html||{C76D83F8-A489-11D0-8195-00A0C91BBEE3}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0409C4-6F87-4987-90A4-B0DBC27181F4}|DeepfakeNews\\DeepfakeNews.csproj|C:\\Users\\Lenovo\\Desktop\\\u6BD4\u8D5B\\DeepfakeNews\\deepfakenews\\submitanswers.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0409C4-6F87-4987-90A4-B0DBC27181F4}|DeepfakeNews\\DeepfakeNews.csproj|solutionrelative:deepfakenews\\submitanswers.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "test-map.html",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\\u6BD4\u8D5B\\DeepfakeNews\\DeepfakeNews\\test-map.html",
+              "RelativeDocumentMoniker": "DeepfakeNews\\test-map.html",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\\u6BD4\u8D5B\\DeepfakeNews\\DeepfakeNews\\test-map.html",
+              "RelativeToolTip": "DeepfakeNews\\test-map.html",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-30T10:31:35.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SubmitAnswers.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\\u6BD4\u8D5B\\DeepfakeNews\\DeepfakeNews\\SubmitAnswers.aspx.cs",
+              "RelativeDocumentMoniker": "DeepfakeNews\\SubmitAnswers.aspx.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\\u6BD4\u8D5B\\DeepfakeNews\\DeepfakeNews\\SubmitAnswers.aspx.cs",
+              "RelativeToolTip": "DeepfakeNews\\SubmitAnswers.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T19:46:00.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DeepfakeNews.aspx",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\\u6BD4\u8D5B\\DeepfakeNews\\DeepfakeNews\\DeepfakeNews.aspx",
+              "RelativeDocumentMoniker": "DeepfakeNews\\DeepfakeNews.aspx",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\\u6BD4\u8D5B\\DeepfakeNews\\DeepfakeNews\\DeepfakeNews.aspx*",
+              "RelativeToolTip": "DeepfakeNews\\DeepfakeNews.aspx*",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-29T18:07:21.078Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
