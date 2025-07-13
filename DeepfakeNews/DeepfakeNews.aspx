@@ -36,145 +36,118 @@
 </section>
 
 
-        <!-- 新增模块：什么是深度伪造 + 动图示范 -->
-        <section class="max-w-7xl mx-auto px-4 py-16 bg-gray-50 rounded-lg shadow-md mb-16">
-            <h2 class="text-3xl font-bold mb-8 text-center">什么是深度伪造？</h2>
-            <div class="flex flex-col md:flex-row items-center gap-10">
-                <div class="md:w-1/2 text-gray-700 leading-relaxed text-lg">
-                    <p>深度伪造（Deepfake）是利用人工智能中的生成对抗网络（GAN）技术，通过大量真实数据训练，合成极具迷惑性的虚假图像、声音和视频。它能够精准模拟人的面部表情、声音语调，让“假”看起来几乎与“真”无异。</p>
-                    <p class="mt-6">生成对抗网络由两部分组成：生成器负责创造“假”数据，判别器负责判断数据真假。二者相互博弈，不断提升生成器的伪造能力，最终生成的内容以假乱真。</p>
-                </div>
-                <div class="md:w-1/2 flex flex-col items-center">
-                    <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" alt="Deepfake Demo GIF" class="rounded-lg shadow-lg max-w-full" />
-                    <p class="text-sm text-gray-500 mt-3">示例：AI换脸技术演示（动图）</p>
-                </div>
-            </div>
-        </section>
-                <!-- 视频组件 -->
-<section class="max-w-5xl mx-auto py-16 px-6 bg-gray-50 rounded-xl shadow-lg space-y-16">
-  <h2 class="text-3xl font-bold text-center mb-12">视频示范：真实与深伪对比</h2>
-
-  <div class="flex flex-col md:flex-row gap-12 justify-center">
-    <!-- 视频卡片 1 -->
-    <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center w-full md:w-1/2">
-      <video controls playsinline class="rounded-lg w-full shadow-lg border border-gray-300">
-        <source src="sp/WeChat_20250630030312.mp4" type="video/mp4" />
-        您的浏览器不支持视频播放。
-      </video>
-      <h3 class="mt-4 text-lg font-semibold">马云深度伪造示范</h3>
-      <p class="mt-1 text-gray-600 text-center text-sm max-w-xs">
-        视频来源：
-        <a href="https://www.douyin.com/user/self?from_tab_name=main&modal_id=7504530726726028554&showTab=like" target="_blank" class="text-blue-600 hover:underline">
-          抖音 - 马云相关视频
-        </a>
-      </p>
-    </div>
-
-    <!-- 视频卡片 2 -->
-    <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center w-full md:w-1/2">
-      <video controls playsinline class="rounded-lg w-full shadow-lg border border-gray-300">
-        <source src="sp/WeChat_20250630030318.mp4" type="video/mp4" />
-        您的浏览器不支持视频播放。
-      </video>
-      <h3 class="mt-4 text-lg font-semibold">雷军深度伪造示范</h3>
-      <p class="mt-1 text-gray-600 text-center text-sm max-w-xs">
-        视频来源：
-        <a href="https://www.douyin.com/user/self?from_tab_name=main&modal_id=7504530726726028554&showTab=like" target="_blank" class="text-blue-600 hover:underline">
-          抖音 - 雷军相关视频
-        </a>
-      </p>
+<!-- 模块一：什么是深度伪造 -->
+<section class="py-16 px-4 bg-gradient-to-b from-blue-50 via-white to-blue-50">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-10 text-center">什么是深度伪造？</h2>
+    <div class="flex flex-col md:flex-row items-center gap-10">
+      <div class="md:w-1/2 text-gray-700 leading-relaxed text-lg">
+        <p>
+          深度伪造（Deepfake）是一种基于生成对抗网络（GAN, Generative Adversarial Networks）的人工智能技术，通过对大量真实视频和音频数据进行训练，能够合成高度逼真的虚假图像、声音和视频。据2023年相关研究表明，深度伪造生成的视频中，专业人员识别错误率低于7%，几乎难以通过肉眼分辨真假。该技术能精准模拟人物的面部表情、语音语调和动作细节，使虚假内容在视觉和听觉上达到以假乱真的效果。
+        </p>
+        <p class="mt-6">
+          生成对抗网络由两个主要部分组成：生成器负责制造“假”数据，判别器则负责区分数据的真伪。两者在训练过程中相互博弈，不断提升生成器的伪造能力。根据NVIDIA 2022年的技术报告，GAN技术已经能够捕捉极其细微的面部动态和声音特征，极大提升了深度伪造内容的真实感。深度伪造技术在影视特效、虚拟主播、数字娱乐等领域应用广泛，同时也带来了隐私泄露、信息安全和伦理风险等严峻挑战。
+        </p>
+      </div>
+      <div class="md:w-1/2 flex flex-col items-center">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWc5ZDNza295Y2Y4c2VqdzA5b2x1cHU5dTFxNGxpbGQyZGtmY2hvaCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/0hv8d4HrDVI6m7w7pF/giphy.gif" alt="Deepfake Demo GIF" class="rounded-lg shadow-lg max-w-full" />
+        <p class="text-sm text-gray-500 mt-3">示例：AI换脸技术演示（动图）</p>
+      </div>
     </div>
   </div>
 </section>
-        <script>
-            function toggleDetail(year) {
-                const detail = document.getElementById('detail-' + year);
-                const btn = detail.previousElementSibling;
-                const icon = document.getElementById('icon-' + year);
-                const circle = document.getElementById('circle-' + year);
-                const isExpanded = btn.getAttribute('aria-expanded') === 'true';
 
-                if (isExpanded) {
-                    // 收起
-                    detail.style.maxHeight = null;
-                    btn.setAttribute('aria-expanded', 'false');
-                    icon.style.transform = 'rotate(0deg)';
-                    circle.style.transform = 'scale(1)';
-                } else {
-                    // 展开
-                    // 关闭其他已展开的节点（单展开）
-                    document.querySelectorAll('button[aria-expanded="true"]').forEach(otherBtn => {
-                        if (otherBtn !== btn) {
-                            const otherYear = otherBtn.getAttribute('aria-controls').replace('detail-', '');
-                            document.getElementById('detail-' + otherYear).style.maxHeight = null;
-                            otherBtn.setAttribute('aria-expanded', 'false');
-                            document.getElementById('icon-' + otherYear).style.transform = 'rotate(0deg)';
-                            document.getElementById('circle-' + otherYear).style.transform = 'scale(1)';
-                        }
-                    });
+<!-- 模块二：视频示范 -->
+<section class="py-16 px-4 bg-gradient-to-b from-blue-50 via-white to-blue-50">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12">视频示范：真实与深伪对比</h2>
+    <div class="flex flex-col md:flex-row gap-12 justify-center">
+      <!-- 视频卡片 1 -->
+      <div class="bg-white rounded-xl p-4 flex flex-col items-center w-full md:w-1/2 shadow-md">
+        <video controls playsinline class="rounded-lg w-full shadow-lg border border-gray-300">
+          <source src="sp/WeChat_20250630030312.mp4" type="video/mp4" />
+          您的浏览器不支持视频播放。
+        </video>
+        <h3 class="mt-4 text-lg font-semibold">马云深度伪造示范</h3>
+        <p class="mt-1 text-gray-600 text-center text-sm max-w-xs">
+          视频来源：
+          <a href="https://www.douyin.com/user/self?from_tab_name=main&modal_id=7504530726726028554&showTab=like" target="_blank" class="text-blue-600 hover:underline">
+            抖音 - 马云相关视频
+          </a>
+        </p>
+      </div>
 
-                    detail.style.maxHeight = detail.scrollHeight + 'px';
-                    btn.setAttribute('aria-expanded', 'true');
-                    icon.style.transform = 'rotate(180deg)';
-                    circle.style.transform = 'scale(1.2)';
-                }
-            }
-        </script>
+      <!-- 视频卡片 2 -->
+      <div class="bg-white rounded-xl p-4 flex flex-col items-center w-full md:w-1/2 shadow-md">
+        <video controls playsinline class="rounded-lg w-full shadow-lg border border-gray-300">
+          <source src="sp/WeChat_20250630030318.mp4" type="video/mp4" />
+          您的浏览器不支持视频播放。
+        </video>
+        <h3 class="mt-4 text-lg font-semibold">雷军深度伪造示范</h3>
+        <p class="mt-1 text-gray-600 text-center text-sm max-w-xs">
+          视频来源：
+          <a href="https://www.douyin.com/user/self?from_tab_name=main&modal_id=7504530726726028554&showTab=like" target="_blank" class="text-blue-600 hover:underline">
+            抖音 - 雷军相关视频
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 模块三：真实案例揭示 -->
+<section class="py-16 px-4 bg-gradient-to-b from-blue-50 via-white to-blue-50">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-extrabold mb-12 text-center text-gray-900 tracking-wide">真实案例揭示：伪造不止娱乐，更多是“骗局”</h2>
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <!-- 案例一 -->
+      <div class="p-8 bg-white rounded-2xl shadow-md border-l-8 border-indigo-500 hover:shadow-xl transition-shadow duration-300">
+        <h3 class="flex items-center gap-3 text-indigo-700 font-semibold text-2xl mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 1.567-3 3.5S10.343 15 12 15s3-1.567 3-3.5S13.657 8 12 8z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v5m-6-5v5m12-5v5M4 13h16M4 8h16" />
+          </svg>
+          案例一：AI换脸语音诈骗
+        </h3>
+        <div class="space-y-4 text-gray-700 leading-relaxed">
+          <p><span class="font-semibold text-indigo-600">被害人：</span>广东广州一位70岁老人</p>
+          <p><span class="font-semibold text-indigo-600">手段：</span>诈骗分子利用深度伪造技术，合成其儿子的语音进行电话交流，同时伪造视频以增强可信度</p>
+          <p><span class="font-semibold text-indigo-600">过程：</span>诈骗者冒充儿子，称遭遇交通事故需紧急筹款，成功骗取老人信任</p>
+          <p><span class="font-semibold text-indigo-600">损失金额：</span><span class="text-red-600 font-extrabold text-lg">累计转账15万元人民币</span></p>
+          <p><span class="font-semibold text-indigo-600">后续：</span>警方接警后介入调查，案件正在进一步侦办中</p>
+          <p class="text-sm text-gray-400 italic">来源：南方都市报，2023年8月</p>
+        </div>
+      </div>
+
+      <!-- 案例二 -->
+      <div class="p-8 bg-white rounded-2xl shadow-md border-l-8 border-purple-500 hover:shadow-xl transition-shadow duration-300">
+        <h3 class="flex items-center gap-3 text-purple-700 font-semibold text-2xl mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A2 2 0 0122 9.618v4.764a2 2 0 01-2.447 1.894L15 14M4 6v12" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7 16V8m0 0L3 12m4-4l4 4" />
+          </svg>
+          案例二：明星被合成不雅视频引发名誉侵权
+        </h3>
+        <div class="space-y-4 text-gray-700 leading-relaxed">
+          <p><span class="font-semibold text-purple-600">平台浏览量：</span><span class="text-red-600 font-extrabold text-lg">超过400万次观看</span></p>
+          <p><span class="font-semibold text-purple-600">事件描述：</span>不法分子利用深度伪造技术，将知名女明星面部精准合成至不雅视频，制造虚假内容在网络传播</p>
+          <p><span class="font-semibold text-purple-600">技术特点：</span>面部表情、嘴型及声音几乎无差别，欺骗性极强</p>
+          <p><span class="font-semibold text-purple-600">影响范围：</span>相关视频在多个短视频平台、社交媒体广泛传播，严重损害明星个人声誉和公众形象</p>
+          <p><span class="font-semibold text-purple-600">法律困境：</span>由于深度伪造技术的复杂性及取证难度，受害者维权成本高，相关法律法规尚在完善中</p>
+          <p><span class="font-semibold text-purple-600">社会反响：</span>此类事件引发社会对深度伪造伦理与监管的广泛关注，推动多个监管机构启动专项治理行动</p>
+          <p class="text-sm text-gray-400 italic">来源：人民日报数字传播研究院，2024年3月</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
-        <!-- 保持案例模块 -->
-        <section class="py-12 px-4 max-w-6xl mx-auto">
-            <h2 class="text-2xl font-bold mb-6">真实案例揭示：伪造不止娱乐，更多是“骗局”</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="p-6 border rounded-xl shadow-sm">
-                    <h3 class="font-bold text-lg mb-2">案例一：AI换脸语音诈骗</h3>
-                    <p>被害人：广东一位老人<br />手段：合成儿子语音通话 + 视频<br />损失：15万元</p>
-                    <p class="text-sm text-gray-500 mt-2">来源：南方都市报，2023年</p>
-                </div>
-                <div class="p-6 border rounded-xl shadow-sm">
-                    <h3 class="font-bold text-lg mb-2">案例二：明星被合成不雅视频</h3>
-                    <p>平台浏览量：400w+<br />AI深伪技术合成，面部表情、声音无差别<br />涉及名誉侵权，难以追责</p>
-                </div>
-            </div>
-        </section>
-       
-<script>
-    const videoFake = document.getElementById('video-fake');
-    const slider = document.getElementById('slider');
-    const container = slider.parentElement;
 
-    // 初始滑块位置百分比
-    let sliderPos = 50;
 
-    function moveSlider(x) {
-        const rect = container.getBoundingClientRect();
-        let pos = ((x - rect.left) / rect.width) * 100;
-        pos = Math.min(Math.max(pos, 0), 100); // 限制范围0~100%
-        sliderPos = pos;
 
-        // 调整滑块和右侧视频显示宽度
-        slider.style.left = pos + '%';
-        videoFake.style.clipPath = `inset(0 ${100 - pos}% 0 0)`;
-        videoFake.style.width = pos + '%';
-    }
-
-    // 鼠标拖动
-    let dragging = false;
-    slider.addEventListener('mousedown', () => dragging = true);
-    window.addEventListener('mouseup', () => dragging = false);
-    window.addEventListener('mousemove', (e) => {
-        if (dragging) moveSlider(e.clientX);
-    });
-
-    // 触摸事件，移动端支持
-    slider.addEventListener('touchstart', () => dragging = true);
-    window.addEventListener('touchend', () => dragging = false);
-    window.addEventListener('touchmove', (e) => {
-        if (dragging && e.touches.length > 0) {
-            moveSlider(e.touches[0].clientX);
-        }
-    });
-</script>
 
         <!-- 保持时间线模块 -->
         <section class="py-16 px-4 bg-gradient-to-b from-blue-50 via-white to-blue-50">
@@ -213,35 +186,37 @@
 
 
         <!-- 新增模块：识别深度伪造技巧 -->
-        <section class="max-w-7xl mx-auto px-4 py-16 bg-gray-50 rounded-lg shadow-md mb-16">
-            <h2 class="text-3xl font-bold mb-8 text-center">如何识别深度伪造？实用技巧</h2>
-            <div class="grid md:grid-cols-3 gap-12 text-gray-700 text-lg">
-                <div class="flex flex-col items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mb-4 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                    <h3 class="font-semibold mb-2">观察面部细节</h3>
-                    <p>眨眼频率异常，嘴唇与声音不同步是常见伪造特征。</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mb-4 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 3l18 18"/><path d="M21 3L3 21"/></svg>
-                    <h3 class="font-semibold mb-2">注意光影边缘</h3>
-                    <p>头发和眼睛边缘模糊，光影不自然是伪造常见瑕疵。</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mb-4 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 20l9-5-9-5-9 5 9 5z"/></svg>
-                    <h3 class="font-semibold mb-2">核实来源渠道</h3>
-                    <p>通过多平台核查视频或音频真实性，避免单一来源误判。</p>
-                </div>
-            </div>
-        </section>
-<section class="bg-gray-50 py-16 px-8 rounded-lg shadow-md max-w-7xl mx-auto">
-  <div class="text-center mb-12">
-    <h2 class="text-4xl font-extrabold text-gray-900 mb-4">🔍 数据视角解读深伪现象</h2>
-    <p class="text-gray-600 text-lg">
-      借助问卷与公开数据，还原公众态度与舆论趋势
-    </p>
+<section class="py-16 px-4 bg-gradient-to-b from-blue-50 via-white to-blue-50">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-12 text-center">如何识别深度伪造？实用技巧</h2>
+    <div class="grid md:grid-cols-3 gap-12 text-gray-700 text-lg text-center">
+      <div class="flex flex-col items-center bg-white rounded-xl border border-blue-200 p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mb-4 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <h3 class="font-semibold mb-2">观察面部细节</h3>
+        <p>眨眼频率异常，嘴唇与声音不同步是常见伪造特征。</p>
+      </div>
+      <div class="flex flex-col items-center bg-white rounded-xl border border-blue-200 p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mb-4 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 3l18 18"/><path d="M21 3L3 21"/></svg>
+        <h3 class="font-semibold mb-2">注意光影边缘</h3>
+        <p>头发和眼睛边缘模糊，光影不自然是伪造常见瑕疵。</p>
+      </div>
+      <div class="flex flex-col items-center bg-white rounded-xl border border-blue-200 p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mb-4 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 20l9-5-9-5-9 5 9 5z"/></svg>
+        <h3 class="font-semibold mb-2">核实来源渠道</h3>
+        <p>通过多平台核查视频或音频真实性，避免单一来源误判。</p>
+      </div>
+    </div>
   </div>
+</section>
 
-  <div style="display: flex; gap: 40px; flex-wrap: wrap; justify-content: center;">
+<section class="bg-gradient-to-b from-blue-50 via-white to-blue-50 py-16 px-4">
+  <div class="max-w-7xl mx-auto bg-white rounded-2xl shadow-lg px-8 py-12">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-extrabold text-gray-900 mb-4">🔍 数据视角解读深伪现象</h2>
+      <p class="text-gray-600 text-lg">借助问卷与公开数据，还原公众态度与舆论趋势</p>
+    </div>
+
+    <div class="flex flex-wrap gap-10 justify-center">
     <!-- 左侧竖排，饼图和折线图 -->
     <div style="flex: 1 1 320px; max-width: 380px; display: flex; flex-direction: column; gap: 50px;">
       <div>
@@ -326,7 +301,7 @@
     const mapChart = echarts.init(mapDom);
 
     // 中国地图geojson地址
-    fetch('https://geo.datav.aliyun.com/areas/bound/100000_full.json')
+    fetch('./china.json')
         .then(res => res.json())
         .then(geoJson => {
             echarts.registerMap('china', geoJson);
@@ -427,7 +402,7 @@
 
 
 
-        <section class="py-20 px-4 bg-white" id="law-compare">
+ <section class="py-16 px-4 bg-gradient-to-b from-blue-50 via-white to-blue-50">
   <div class="max-w-6xl mx-auto text-center">
     <h2 class="text-3xl font-extrabold text-gray-900 mb-12">📜 国内外治理法规对比</h2>
     <div class="grid md:grid-cols-3 gap-8 text-left">
@@ -476,9 +451,10 @@
 </section>
 
 
-        <section class="py-16 px-4 bg-white" id="quiz">
+<section class="py-16 px-4 bg-gradient-to-b from-blue-50 via-white to-blue-50">
   <div class="max-w-5xl mx-auto">
     <h2 class="text-3xl font-bold mb-10 text-center text-gray-800">🔍 你能识破深伪陷阱吗？</h2>
+
     <div class="space-y-10" id="questions-container">
       <!-- 问题1 -->
       <div class="p-6 bg-blue-50 rounded-lg shadow-md">
@@ -525,6 +501,7 @@
   </div>
 </section>
 
+<!-- Chart.js 图表 -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
@@ -636,88 +613,94 @@
 
 
 
-        <!-- 六、建议总结（三栏图标+文字） -->
-        <section class="py-20 px-4 bg-gray-100" id="advice">
+
+<!-- 六、建议总结（三栏图标+文字） -->
+<section class="py-20 px-4 bg-gradient-to-b from-blue-50 via-white to-blue-50" id="advice">
   <div class="max-w-6xl mx-auto text-center">
     <h2 class="text-3xl font-extrabold text-gray-900 mb-12">🔧 我们的建议</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      
+    <div class="grid md:grid-cols-3 gap-10">
       <!-- 技术建议卡片 -->
-      <div class="bg-white rounded-xl shadow-lg border-t-4 border-blue-500 p-6 hover:shadow-2xl transition">
+      <div class="bg-white rounded-2xl shadow-md border-t-4 border-blue-500 p-6 hover:shadow-xl transition-all duration-300">
         <div class="mb-4 flex items-center justify-center w-14 h-14 rounded-full bg-blue-100 text-blue-700 mx-auto">
-          <!-- 图标 -->
           <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19l-7-7 7-7M20 19V5" />
           </svg>
         </div>
         <h3 class="text-xl font-bold mb-2 text-blue-700">推广 AI 溯源技术</h3>
-        <p class="text-gray-700 mb-2">依靠 <strong>自动识别伪造痕迹</strong> 的算法，提升对深伪内容的检测能力。</p>
+        <p class="text-gray-700">依靠 <strong>自动识别伪造痕迹</strong> 的算法，提升对深伪内容的检测能力。</p>
         <p class="text-sm text-blue-500 font-semibold mt-4">➡️ 技术是第一道防线</p>
       </div>
 
       <!-- 法律建议卡片 -->
-      <div class="bg-white rounded-xl shadow-lg border-t-4 border-green-500 p-6 hover:shadow-2xl transition">
+      <div class="bg-white rounded-2xl shadow-md border-t-4 border-green-500 p-6 hover:shadow-xl transition-all duration-300">
         <div class="mb-4 flex items-center justify-center w-14 h-14 rounded-full bg-green-100 text-green-700 mx-auto">
-          <!-- 图标 -->
           <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <circle cx="12" cy="12" r="10" />
             <path d="M12 6v6l4 2" />
           </svg>
         </div>
         <h3 class="text-xl font-bold mb-2 text-green-700">细化深伪法律边界</h3>
-        <p class="text-gray-700 mb-2">明确 <strong>合成内容使用范围</strong>，提升违法成本，推动法规落地。</p>
+        <p class="text-gray-700">明确 <strong>合成内容使用范围</strong>，提升违法成本，推动法规落地。</p>
         <p class="text-sm text-green-500 font-semibold mt-4">➡️ 法律需与技术并行</p>
       </div>
 
       <!-- 教育建议卡片 -->
-      <div class="bg-white rounded-xl shadow-lg border-t-4 border-purple-500 p-6 hover:shadow-2xl transition">
+      <div class="bg-white rounded-2xl shadow-md border-t-4 border-purple-500 p-6 hover:shadow-xl transition-all duration-300">
         <div class="mb-4 flex items-center justify-center w-14 h-14 rounded-full bg-purple-100 text-purple-700 mx-auto">
-          <!-- 图标 -->
           <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path d="M12 20l9-5-9-5-9 5 9 5z" />
           </svg>
         </div>
         <h3 class="text-xl font-bold mb-2 text-purple-700">加强数智素养教育</h3>
-        <p class="text-gray-700 mb-2">推动 <strong>AI辨识能力普及</strong>，从学校、媒体到大众全面提升防范意识。</p>
+        <p class="text-gray-700">推动 <strong>AI 辨识能力普及</strong>，从学校、媒体到大众全面提升防范意识。</p>
         <p class="text-sm text-purple-500 font-semibold mt-4">➡️ 公民素养是关键</p>
       </div>
-
     </div>
   </div>
 </section>
 
-
-
 <!-- 结语 + 团队信息模块 -->
-<section class="bg-gray-100 py-16 px-6 text-center rounded-lg max-w-4xl mx-auto shadow-md mb-20">
+<section class="bg-white py-20 px-6 text-center rounded-2xl shadow-lg max-w-5xl mx-auto mt-20">
   <h2 class="text-3xl font-extrabold text-gray-900 mb-6">感谢您的关注！</h2>
   <p class="max-w-3xl mx-auto text-gray-700 mb-10 leading-relaxed text-lg">
     深度伪造技术带来了前所未有的挑战，也推动了技术、法律与社会多方协作。希望本项目能帮助您更好地认识并防范深伪风险。
   </p>
 
   <div class="mb-10">
-    <h3 class="text-2xl font-semibold mb-4">👥 团队信息</h3>
-    <p class="text-gray-800 mb-2">数据新闻项目团队</p>
-    <p class="text-gray-800 mb-2">邮箱：<a href="mailto:contact@deepfakewatch.cn" class="text-blue-600 hover:underline">contact@deepfakewatch.cn</a></p>
-    <p class="text-gray-800 mb-2">电话：+86 123 4567 8901</p>
-    <p class="text-gray-800">微信公众号：深伪观察</p>
+    <h3 class="text-2xl font-semibold mb-3">👥 团队信息</h3>
+    <p class="text-gray-800 text-lg">坤坤数据新闻项目团队</p>
   </div>
 
-  <a href="files/Deepfake_Report_2025.pdf" target="_blank" rel="noopener noreferrer" class="inline-block bg-yellow-400 text-black font-semibold rounded-lg px-8 py-3 hover:bg-yellow-300 transition">
-    📥 下载深伪报告 (PDF)
-  </a>
+  <!-- 这里是新增的“下载本页为PDF”按钮 -->
+  <button id="downloadPdfBtn" 
+    class="inline-block bg-yellow-400 text-black font-semibold rounded-xl px-8 py-3 hover:bg-yellow-300 transition cursor-pointer">
+    📥 下载本页为PDF
+  </button>
 </section>
 
+<!-- 需要引入html2pdf.js库，并写脚本 -->
+<script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js"></script>
+<script>
+    document.getElementById('downloadPdfBtn').addEventListener('click', () => {
+        // 这里我们把整个section内容转成pdf下载
+        const element = document.querySelector('section.bg-white');
+        const opt = {
+            margin: 0.5,
+            filename: 'Deepfake_Report_Webpage.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+        };
+        html2pdf().set(opt).from(element).save();
+    });
+</script>
 
 
-
-        <!-- Footer -->
-        <footer class="bg-gray-900 text-white text-center py-6">
-            <p>&copy; 2025 数据新闻项目团队 - 深度伪造观察</p>
-        </footer>
-
-    </form>
-
+<!-- Footer -->
+<footer class="bg-gray-900 text-white text-center py-6 mt-16">
+  <p class="text-sm tracking-wide">&copy; 2025 数据新闻项目团队 - 深度伪造观察</p>
+</footer>
+</form>
    
 
 </body>

@@ -10,7 +10,6 @@ namespace DeepfakeNews
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // 只处理 POST 请求
             if (Request.HttpMethod != "POST") return;
 
             string jsonData;
@@ -19,11 +18,11 @@ namespace DeepfakeNews
                 jsonData = reader.ReadToEnd();
             }
 
-            // 反序列化 JSON 成 Dictionary
             var serializer = new JavaScriptSerializer();
             var selections = serializer.Deserialize<Dictionary<string, string>>(jsonData);
 
-            string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\chk.mdf;Integrated Security=True";
+            // ✅ 修改后的连接字符串
+            string connStr = @"Server=localhost;Database=chk;User Id=sa;Password=Kk123456??;";
 
             using (SqlConnection conn = new SqlConnection(connStr))
             {
@@ -43,7 +42,7 @@ namespace DeepfakeNews
                     }
                 }
 
-                // 查询最新统计结果
+                // 查询统计
                 string query = "SELECT QuestionId, OptionId, Count FROM QuizStatistics";
                 var result = new Dictionary<string, Dictionary<string, int>>();
 
@@ -63,7 +62,7 @@ namespace DeepfakeNews
                     }
                 }
 
-                // 返回 JSON
+                // 输出 JSON 结果
                 Response.ContentType = "application/json";
                 Response.Write(serializer.Serialize(result));
                 Response.End();
